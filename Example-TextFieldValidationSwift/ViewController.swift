@@ -12,10 +12,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var phoneNumberTF: UITextField!
+    @IBOutlet weak var amountTF: UITextField!
     
     @IBOutlet weak var emailError: UILabel!
     @IBOutlet weak var passwordError: UILabel!
     @IBOutlet weak var phoneNumberError: UILabel!
+    @IBOutlet weak var amountError: UILabel!
     
     @IBOutlet weak var submitButton: UIButton!
     
@@ -30,14 +32,17 @@ class ViewController: UIViewController {
         emailError.isHidden = false
         passwordError.isHidden = false
         phoneNumberError.isHidden = false
+        amountError.isHidden = false
         
         emailError.text = "Required"
         passwordError.text = "Required"
         phoneNumberError.text = "Required"
+        amountError.text = "Required"
         
         emailTF.text = ""
         passwordTF.text = ""
         phoneNumberTF.text = ""
+        amountTF.text = ""
         
     }
     
@@ -137,13 +142,41 @@ class ViewController: UIViewController {
         return nil
     }
     
+    //MARK: - Amount Validation
+    
+    @IBAction func amountChanged(_ sender: Any) {
+        print("amount changed ...")
+        if let amount = amountTF.text {
+            //if field is left blank
+            if amount == "" {
+                amountError.text = "Required"
+                amountError.isHidden = false
+            } else {
+                //if field has some value
+                let amountDouble: Float? = Float(amount)
+                if amountDouble == nil {
+                    amountError.text = "Invalid Number"
+                    amountError.isHidden = false
+                } else {
+                    amountError.isHidden = true
+                }
+            }
+        }
+        //to enable/ disable submit based on input received in amount field
+        checkForValidForm()
+    }
+    
+    //MARK: - enable/ disable submit button
+    //validation before enabling submit button
     func checkForValidForm() {
-        if emailError.isHidden && phoneNumberError.isHidden && passwordError.isHidden {
+        if emailError.isHidden && phoneNumberError.isHidden && passwordError.isHidden && amountError.isHidden {
             submitButton.isEnabled = true
         } else {
             submitButton.isEnabled = false
         }
     }
+    
+    //MARK: - Submit button action
     
     @IBAction func submitAction(_ sender: Any) {
         resetForm()

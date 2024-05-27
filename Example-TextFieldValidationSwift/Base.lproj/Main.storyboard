@@ -52,8 +52,8 @@
                                     <action selector="phoneNumberChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="q82-Ym-v3k"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7H-zs-B45">
-                                <rect key="frame" x="157.33333333333334" y="398" width="78" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7H-zs-B45">
+                                <rect key="frame" x="157" y="480" width="78" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                 <connections>
@@ -62,6 +62,20 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="dcb-SI-pXa">
                                 <rect key="frame" x="39.333333333333343" y="312" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8f-A6-FtK">
+                                <rect key="frame" x="39.333333333333343" y="341" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="amountChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="hH8-KY-tHd"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="LgG-7I-KMf">
+                                <rect key="frame" x="39.333333333333343" y="393" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,16 +89,21 @@
                             <constraint firstItem="r5X-Ce-OkZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="DEb-d6-zj1"/>
                             <constraint firstItem="1ax-Eq-PMm" firstAttribute="top" secondItem="r5X-Ce-OkZ" secondAttribute="bottom" constant="50" id="DNd-h2-QG1"/>
                             <constraint firstItem="r5X-Ce-OkZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="EUd-Hg-Bcd"/>
+                            <constraint firstItem="M8f-A6-FtK" firstAttribute="centerX" secondItem="vlC-5W-aht" secondAttribute="centerX" id="FLG-Yq-MYZ"/>
                             <constraint firstItem="r5X-Ce-OkZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39.333333333333343" id="GHk-Sr-mhW"/>
                             <constraint firstItem="Ucw-Og-tTa" firstAttribute="leading" secondItem="1ax-Eq-PMm" secondAttribute="leading" id="H9b-mu-NRa"/>
                             <constraint firstItem="1ax-Eq-PMm" firstAttribute="width" secondItem="r5X-Ce-OkZ" secondAttribute="width" id="Npl-bm-HFj"/>
+                            <constraint firstItem="LgG-7I-KMf" firstAttribute="leading" secondItem="M8f-A6-FtK" secondAttribute="leading" id="OHg-3O-1aO"/>
                             <constraint firstItem="T7H-zs-B45" firstAttribute="centerX" secondItem="vlC-5W-aht" secondAttribute="centerX" id="SG0-vT-cvu"/>
+                            <constraint firstItem="LgG-7I-KMf" firstAttribute="top" secondItem="M8f-A6-FtK" secondAttribute="bottom" constant="18" id="XSS-eI-0ZI"/>
                             <constraint firstItem="dcb-SI-pXa" firstAttribute="leading" secondItem="vlC-5W-aht" secondAttribute="leading" id="Xqq-Uf-t5c"/>
                             <constraint firstItem="1ax-Eq-PMm" firstAttribute="centerX" secondItem="r5X-Ce-OkZ" secondAttribute="centerX" id="YiG-Mh-CR6"/>
                             <constraint firstItem="vlC-5W-aht" firstAttribute="width" secondItem="1ax-Eq-PMm" secondAttribute="width" id="ZBE-8t-3Ck"/>
                             <constraint firstItem="dcb-SI-pXa" firstAttribute="top" secondItem="vlC-5W-aht" secondAttribute="bottom" constant="21" id="ZFC-6i-fKx"/>
+                            <constraint firstItem="M8f-A6-FtK" firstAttribute="width" secondItem="vlC-5W-aht" secondAttribute="width" id="aQ5-RZ-MvI"/>
                             <constraint firstItem="heZ-a3-OGb" firstAttribute="top" secondItem="r5X-Ce-OkZ" secondAttribute="bottom" constant="8" symbolic="YES" id="eyX-Sr-k9X"/>
                             <constraint firstItem="1ax-Eq-PMm" firstAttribute="leading" secondItem="vlC-5W-aht" secondAttribute="trailing" constant="-313.99999999999989" id="hqS-fb-NKv"/>
+                            <constraint firstItem="M8f-A6-FtK" firstAttribute="top" secondItem="vlC-5W-aht" secondAttribute="bottom" constant="50" id="idb-76-inq"/>
                             <constraint firstItem="r5X-Ce-OkZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mcH-Mf-z79"/>
                             <constraint firstItem="vlC-5W-aht" firstAttribute="top" secondItem="1ax-Eq-PMm" secondAttribute="bottom" constant="53" id="nCE-rR-Pyu"/>
                             <constraint firstItem="Ucw-Og-tTa" firstAttribute="top" secondItem="1ax-Eq-PMm" secondAttribute="bottom" constant="10" id="oAn-Bk-3Q3"/>
@@ -92,6 +111,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="amountError" destination="LgG-7I-KMf" id="Gte-c6-2bt"/>
+                        <outlet property="amountTF" destination="M8f-A6-FtK" id="njM-PM-Z3d"/>
                         <outlet property="emailError" destination="heZ-a3-OGb" id="RcG-yq-ORb"/>
                         <outlet property="emailTF" destination="r5X-Ce-OkZ" id="5OS-5E-YpV"/>
                         <outlet property="passwordError" destination="Ucw-Og-tTa" id="iwv-jc-uuF"/>
@@ -111,7 +132,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
